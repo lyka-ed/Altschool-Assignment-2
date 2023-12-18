@@ -1,0 +1,5 @@
+# Set text files to use LF line endings
+* text=auto
+
+# Set specific files to use CRLF line endings
+*.txt text eol=crlf
