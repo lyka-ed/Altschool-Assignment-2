@@ -83,10 +83,10 @@ img {
   font-family: "Sofia Pro", sans-serif;
 }
 
-img {
+/* img {
   width: 77px;
   margin-bottom: 50px;
-}
+} */
 
 .header {
   line-height: 1.25;
@@ -185,6 +185,27 @@ button {
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
+#show-passwd {
+  position: relative;
+  top: -42%;
+  left: 92%;
+  /* top: 74%;
+  right: 11.5%; */
+  /* top: 1025px;
+  right: 70px; */
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  color: var(--header-text-color);
+}
+
+#show-passwd img {
+  width: 100%;
+  height: auto;
+}
+
 button:hover {
   background-color: var(--text-color);
 }
@@ -201,7 +222,6 @@ button:hover {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  /* moz-appearance: none; */
   margin: 0;
 }
 
@@ -216,7 +236,7 @@ input[type="date"] {
 }
 
 input[type="password"] {
-  background: url("assets/show.png") 96% center no-repeat;
+  padding-right: 2.5rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -251,11 +271,6 @@ input[type="password"] {
     padding-block: 30px 64px;
   }
 
-  img {
-    width: 39px;
-    margin-bottom: 40px;
-  }
-
   .header {
     font-size: 1.875rem;
   }
@@ -282,5 +297,14 @@ input[type="password"] {
 
   .form-container p {
     line-height: 1.5625;
+  }
+
+  input[type="password"] {
+    padding-right: 1.5rem;
+  }
+
+  #show-passwd {
+    right: 3.6rem;
+    top: -39%;
   }
 }

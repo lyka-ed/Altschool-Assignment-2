@@ -52,12 +52,22 @@
 
               <div class="list item-4">
                 <label for="date_of_birth">Date of Birth</label>
-                <input type="date" name="date_of_birth" required />
+                <input
+                  type="date"
+                  name="date_of_birth"
+                  id="date_of_birth"
+                  placeholder="Select here"
+                />
               </div>
 
               <div class="list item-5">
                 <label for="weight">Weight (KG)</label>
-                <input type="number" name="weight" placeholder="Enter weight" />
+                <input
+                  type="number"
+                  name="weight"
+                  placeholder="Enter weight"
+                  required
+                />
               </div>
 
               <div class="list item-6">
@@ -82,7 +92,10 @@
 
               <div class="list item-8">
                 <label for="password">Password</label>
-                <input type="password" name="password" />
+                <input type="password" name="password" id="password" />
+                <div class="show-passwd" id="show-passwd">
+                  <img src="./eye_open.svg" alt="Show Password" />
+                </div>
               </div>
             </div>
             <div class="button"><button>Register</button></div>
@@ -97,5 +110,24 @@
         </div>
       </section>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var dateOfBirthInput = document.getElementById("date_of_birth");
+        dateOfBirthInput.valueAsDate = new Date();
+      });
+
+      const show_pw_btn = document.querySelector("#show-passwd");
+      const show_pw_icon = show_pw_btn.querySelector("img");
+      const pw_input = document.querySelector("#password");
+
+      show_pw_btn.addEventListener("click", () => {
+        pw_input.type = pw_input.type === "password" ? "text" : "password";
+
+        show_pw_icon.src = show_pw_icon.src.includes("open")
+          ? "eye_closed.svg"
+          : "eye_open.svg";
+      });
+    </script>
   </body>
 </html>
